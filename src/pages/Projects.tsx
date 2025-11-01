@@ -1,54 +1,61 @@
-import { ExternalLink, Award, Users, DollarSign } from "lucide-react";
+import { ExternalLink, Award, Users, DollarSign, FileCheck, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const Projects = () => {
-  const featuredProject = {
-    title: "AdaptEV",
-    subtitle: "Founder & Lead Developer",
-    period: "2024 - Present",
-    description:
-      "Converting an ICE car into an electric vehicle specifically designed for physically disabled drivers. Led a cross-disciplinary team to design adaptive controls and wheelchair accessibility features.",
-    achievements: [
-      { icon: DollarSign, text: "Secured ₹3,00,000 in funding" },
-      { icon: Award, text: "Crest Award for innovation and social impact" },
-      { icon: Users, text: "Co-validated by Exicom and IIT Madras" },
-    ],
-    tags: ["Electric Vehicles", "Accessibility", "Innovation", "Social Impact"],
-  };
-
-  const otherProjects = [
+  const featuredProjects = [
     {
-      title: "AI Research Intern",
-      company: "Pangea Society",
+      title: "AdaptEV",
+      subtitle: "Founder & Lead Developer",
+      period: "2025 - Present",
+      description:
+        "Developed India's first low-cost, student-led electric car designed for paraplegic drivers, featuring innovative upper-limb-only controls and enhanced accessibility adaptations.",
+      achievements: [
+        { icon: DollarSign, text: "Secured ₹3,00,000 in funding" },
+        { icon: Award, text: "CREST Gold Award by the British Science Association for Innovation and Social Impact" },
+        { icon: Users, text: "Co-validated by Exicom, Suzuki and IIT Madras" },
+        { icon: FileCheck, text: "Under review by the Indian Ministry of Social Justice and Empowerment" },
+      ],
+      tags: ["Electric Vehicles", "Accessibility", "Innovation", "Social Impact"],
+    },
+    {
+      title: "Teleperformance CSR – Citizens of the World",
+      subtitle: "Internship",
+      period: "2024 - Present",
+      description:
+        "Curated student friendly mechanics curriculum for rural schools hosting underserved students.",
+      achievements: [
+        { icon: Users, text: "Impacted 10K+ Students" },
+        { icon: TrendingUp, text: "Drove 32% Rise in STEM Adoption" },
+        { icon: Award, text: "Honored by CSR Board" },
+      ],
+      tags: ["Education", "Social Impact", "STEM", "Curriculum Development"],
+    },
+    {
+      title: "InsightAI",
+      subtitle: "Lead Developer",
       period: "2024",
       description:
-        "Developed a predictive AI model to assess the likelihood of depression, applying data science and machine learning techniques.",
-      tags: ["AI/ML", "Healthcare", "Data Science"],
+        "Trained AI model to pre-diagnose Major Depressive Disorder based on tester demographics.",
+      achievements: [
+        { icon: FileCheck, text: "Executive Detail Published and Peer Reviewed" },
+        { icon: Award, text: "Presented in UNESCO HK Conference on the use of AI in Education" },
+        { icon: TrendingUp, text: "98% Success Rate in Identifying Depressive Cases" },
+      ],
+      tags: ["AI/ML", "Healthcare", "Mental Health", "UNESCO"],
     },
     {
-      title: "Research & Operations Intern",
-      company: "99 Animals",
-      period: "2023",
+      title: "Seed&Serve",
+      subtitle: "Co-Founder",
+      period: "2022",
       description:
-        "Supported a wellness-focused café inspired by Blue Zones. Contributed to product and menu design based on nutrition research while managing staff onboarding.",
-      tags: ["Wellness", "Research", "Operations"],
-    },
-    {
-      title: "Work Experience Program Intern",
-      company: "Adobe",
-      period: "2023",
-      description:
-        "Completed Adobe's Work Experience Program and certified as an official Adobe Ambassador. Gained exposure to creative tools and digital design workflows.",
-      tags: ["Design", "Digital Tools", "Ambassador"],
-    },
-    {
-      title: "Technical Intern",
-      company: "Solar Innaroof",
-      period: "2021-2023",
-      description:
-        "Designed solar panel layouts for commercial and residential projects. Assisted with on-site installations and gained hands-on experience in renewable energy systems.",
-      tags: ["Renewable Energy", "Solar", "Sustainability"],
+        "Hosted fundraisers to combat food insecurity and sessions on food waste management.",
+      achievements: [
+        { icon: Users, text: "Partnered with Local Orphanage" },
+        { icon: DollarSign, text: "300+ Meals Sponsored" },
+        { icon: FileCheck, text: "Directed Primary & Secondary Research" },
+      ],
+      tags: ["Social Impact", "Food Security", "Community Service", "Research"],
     },
   ];
 
@@ -66,82 +73,56 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Featured Project */}
-          <div className="animate-fade-in">
+          {/* Featured Projects */}
+          <div className="space-y-6">
             <div className="mb-4">
               <Badge variant="default" className="text-sm">
-                Featured Project
+                Featured Projects
               </Badge>
             </div>
-            <Card className="border-primary/20 bg-gradient-to-br from-card via-card to-primary/5 shadow-xl">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle className="text-3xl mb-2">{featuredProject.title}</CardTitle>
-                    <CardDescription className="text-base">
-                      {featuredProject.subtitle} • {featuredProject.period}
-                    </CardDescription>
+            {featuredProjects.map((project, projectIndex) => (
+              <Card 
+                key={projectIndex}
+                className="border-primary/20 bg-gradient-to-br from-card via-card to-primary/5 shadow-xl animate-fade-in border-l-4 border-l-primary"
+                style={{ animationDelay: `${projectIndex * 0.1}s` }}
+              >
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <CardTitle className="text-3xl mb-2">{project.title}</CardTitle>
+                      <CardDescription className="text-base">
+                        {project.subtitle} • {project.period}
+                      </CardDescription>
+                    </div>
                   </div>
-                  <ExternalLink className="h-5 w-5 text-primary" />
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-lg leading-relaxed">{featuredProject.description}</p>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <p className="text-lg leading-relaxed">{project.description}</p>
 
-                <div className="grid md:grid-cols-3 gap-4">
-                  {featuredProject.achievements.map((achievement, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start space-x-3 p-4 bg-background/50 rounded-lg"
-                    >
-                      <achievement.icon className="h-5 w-5 text-primary mt-0.5" />
-                      <span className="text-sm">{achievement.text}</span>
-                    </div>
-                  ))}
-                </div>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {project.achievements.map((achievement, index) => (
+                      <div
+                        key={index}
+                        className={`flex items-start space-x-3 p-4 bg-background/50 rounded-lg ${
+                          index === 3 ? "md:col-start-2" : ""
+                        }`}
+                      >
+                        <achievement.icon className="h-5 w-5 text-primary mt-0.5" />
+                        <span className="text-sm">{achievement.text}</span>
+                      </div>
+                    ))}
+                  </div>
 
-                <div className="flex flex-wrap gap-2">
-                  {featuredProject.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Other Projects */}
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Other Experience</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {otherProjects.map((project, index) => (
-                <Card
-                  key={index}
-                  className="hover:shadow-lg transition-all hover:scale-[1.02] animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardHeader>
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                    <CardDescription>
-                      {project.company} • {project.period}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <Badge key={tag} variant="outline">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Research from "./pages/Research";
+import PreprofessionalExperience from "./pages/PreprofessionalExperience";
 import Leadership from "./pages/Leadership";
 import Awards from "./pages/Awards";
 import Contact from "./pages/Contact";
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/research" element={<Research />} />
+            <Route path="/preprofessional-experience" element={<PreprofessionalExperience />} />
             <Route path="/leadership" element={<Leadership />} />
             <Route path="/awards" element={<Awards />} />
             <Route path="/contact" element={<Contact />} />

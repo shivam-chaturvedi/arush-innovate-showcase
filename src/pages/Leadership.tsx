@@ -5,6 +5,16 @@ import { Badge } from "@/components/ui/badge";
 const Leadership = () => {
   const leadershipRoles = [
     {
+      title: "Founder & President",
+      organization: "APEX - Automobiles and Motorsport Club",
+      period: "2022-2023",
+      icon: Target,
+      description:
+        "Founded and led the school's automobiles and motorsport club. Conducted 50+ hours of sessions on engineering principles, types of engines, and car mechanics. Led hands-on workshops on Go-Kart design and construction.",
+      impact: ["50+ hours of sessions", "Go-Kart workshop"],
+      tags: ["Automotive", "Engineering", "Motorsport"],
+    },
+    {
       title: "Founder & Director",
       organization: "Hi-Tech",
       period: "2022 - Present",
@@ -15,22 +25,12 @@ const Leadership = () => {
       tags: ["Robotics", "Hackathons", "Esports"],
     },
     {
-      title: "Founder & President",
-      organization: "APEX - Automobiles and Motorsport Club",
-      period: "2022-2023",
-      icon: Target,
-      description:
-        "Founded and led the school's automobiles and motorsport club. Conducted 50+ hours of sessions on engineering principles, types of engines, and car mechanics. Led hands-on workshops on Go-Kart design and construction.",
-      impact: ["500+ students nationwide", "50+ hours of sessions", "Go-Kart workshop"],
-      tags: ["Automotive", "Engineering", "Motorsport"],
-    },
-    {
       title: "Chairperson & Trainer",
       organization: "School MUNSOC",
       period: "2022-2023",
       icon: Users,
       description:
-        "Trained and mentored 110+ students over 100+ hours, developing debating and diplomacy skills. Organized intra- and inter-school MUNs with 150+ participants.",
+        "Trained and mentored 110+ students over 100+ hours, developing debating and diplomacy skills. Chaired multiple MUNs with a total of 300+ delegates impacted.",
       impact: ["110+ students trained", "100+ training hours", "150+ MUN participants"],
       tags: ["Model UN", "Diplomacy", "Public Speaking"],
     },

@@ -10,13 +10,49 @@ const Awards = () => {
       color: "text-yellow-500",
       awards: [
         {
+          name: "Sir Isaac Newton Olympiad",
+          achievement: "Distinction",
+          year: "2025",
+          highlight: true,
+        },
+        {
           name: "National Astronomy Challenge",
           achievement: "Top Performance",
           year: "2023",
         },
+      ],
+    },
+    {
+      title: "Innovation & Technology",
+      icon: AwardIcon,
+      color: "text-purple-500",
+      awards: [
         {
-          name: "Sir Isaac Newton Olympiad",
-          achievement: "Merit Recognition",
+          name: "Emerging Engineering Innovator",
+          achievement: "Presented by Exicom Ltd",
+          year: "2025",
+          highlight: true,
+        },
+        {
+          name: "CREST Gold Award",
+          achievement: "Presented by the British Science Association for Innovation and Social Impact",
+          year: "2024",
+          highlight: true,
+        },
+        {
+          name: "AdaptEV Recognition",
+          achievement: "Recognized by Suzuki & IIT Madras | Under Consideration by Ministry of Social Justice and Empowerment",
+          year: "2025",
+          highlight: true,
+        },
+        {
+          name: "F1 in Schools",
+          achievement: "Best Media Outreach - North India | Selected for Nationals",
+          year: "2023",
+        },
+        {
+          name: "Adobe Youth Ambassador",
+          achievement: "Official Certification",
           year: "2023",
         },
       ],
@@ -27,24 +63,27 @@ const Awards = () => {
       color: "text-blue-500",
       awards: [
         {
-          name: "Harvard Model United Nations",
-          achievement: "Distinguished Delegate",
-          year: "2024",
+          name: "Various Executive Boards",
+          achievement: "Invited to Chair & Direct 6 Committees",
+          year: "2024-2025",
+          highlight: true,
+        },
+        {
+          name: "UNESCO Hong Kong Conference",
+          achievement: "Two Time Awardee & Press Release Feature",
+          year: "2024 & 2025",
+          highlight: true,
         },
         {
           name: "Yale Model United Nations",
           achievement: "Honorable Mention",
           year: "2024",
         },
+        
         {
-          name: "UNESCO Hong Kong Model UN",
-          achievement: "Best Delegate",
-          year: "2023",
-        },
-        {
-          name: "IIMUN (International)",
-          achievement: "Outstanding Delegate",
-          year: "2023",
+          name: "Harvard Model United Nations",
+          achievement: "Honorable Mention",
+          year: "2024",
         },
         {
           name: "Various MUNs",
@@ -54,41 +93,26 @@ const Awards = () => {
       ],
     },
     {
-      title: "Innovation & Technology",
-      icon: AwardIcon,
-      color: "text-purple-500",
-      awards: [
-        {
-          name: "Crest Award",
-          achievement: "Innovation and Social Impact (AdaptEV)",
-          year: "2024",
-        },
-        {
-          name: "F1 in Schools",
-          achievement: "Best Media Outreach - North India",
-          year: "2023",
-        },
-        {
-          name: "Adobe Ambassador",
-          achievement: "Official Certification",
-          year: "2023",
-        },
-      ],
-    },
-    {
       title: "Sports & Athletics",
       icon: Medal,
       color: "text-green-500",
       awards: [
         {
+          name: "PADI Advanced Open Water Diver",
+          achievement: "12 Dives • 350+ Minutes",
+          year: "2024 - Present",
+          highlight: true,
+        },
+        {
           name: "ISSO Table Tennis Nationals",
           achievement: "Team Captain - National Competition",
-          year: "2022-2023",
+          year: "2024-2025",
+          highlight: true,
         },
         {
           name: "Basketball Leadership",
           achievement: "Founded 150-member Heritage Basketball League",
-          year: "2022-2023",
+          year: "2024-2025",
         },
       ],
     },
@@ -98,9 +122,24 @@ const Awards = () => {
       color: "text-pink-500",
       awards: [
         {
+          name: "WIRED National Music Competition",
+          achievement: "1st Place",
+          year: "2025",
+        },
+        {
+          name: "TEDx Performances",
+          achievement: "Performed 2 Years in a Row",
+          year: "2023-2024",
+        },
+        {
+          name: "Charity Concert Performances",
+          achievement: "Raised Funds for Underprivileged Schools and Children",
+          year: "2025",
+        },
+        {
           name: "School Music Performances",
           achievement: "Multiple Recognition Awards",
-          year: "2020-2024",
+          year: "2022-2025",
         },
       ],
     },
@@ -139,7 +178,9 @@ const Awards = () => {
                   {category.awards.map((award, awardIndex) => (
                     <Card
                       key={awardIndex}
-                      className="hover:shadow-lg transition-all hover:scale-[1.02] group"
+                      className={`hover:shadow-lg transition-all hover:scale-[1.02] group ${
+                        award.highlight ? "border-l-4 border-l-primary bg-primary/10" : ""
+                      }`}
                     >
                       <CardHeader>
                         <div className="flex items-start justify-between mb-2">
@@ -170,18 +211,18 @@ const Awards = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center space-y-2">
                   <div className="text-3xl font-bold text-primary">15+</div>
-                  <div className="text-sm text-muted-foreground">Total Awards</div>
+                  <div className="text-sm text-muted-foreground">Awards</div>
                 </div>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl font-bold text-primary">5+</div>
-                  <div className="text-sm text-muted-foreground">MUN Recognitions</div>
+                  <div className="text-3xl font-bold text-primary">10+</div>
+                  <div className="text-sm text-muted-foreground">National Level Recognition</div>
                 </div>
                 <div className="text-center space-y-2">
                   <div className="text-3xl font-bold text-primary">2</div>
                   <div className="text-sm text-muted-foreground">Olympiad Medals</div>
                 </div>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl font-bold text-primary">3</div>
+                  <div className="text-3xl font-bold text-primary">3+</div>
                   <div className="text-sm text-muted-foreground">Innovation Awards</div>
                 </div>
               </div>

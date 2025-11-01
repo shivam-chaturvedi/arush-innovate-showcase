@@ -16,8 +16,8 @@ const Research = () => {
     {
       title: "Multivariate-Input Univariate-Output Predictive Random Forest Model",
       subtitle: "For Major Depression Disorder Detection",
-      status: "Pending Peer Review",
-      journal: "Under Review",
+      status: "Published",
+      journal: "Curieux Academic Journal",
       description:
         "Developed an AI-driven predictive model using Random Forest algorithms to assess the likelihood of major depression disorder based on multivariate input factors.",
       tags: ["Machine Learning", "Healthcare", "Mental Health"],
@@ -26,21 +26,28 @@ const Research = () => {
 
   const independentResearch = [
     {
+      title: "Golf Ball Aerodynamics: Dimple Geometry vs Magnus Coefficient",
+      link: "https://www.irjet.net/archives/V12/i9/IRJET-V12I933.pdf",
+      description:
+        "Quantified the correlation between dimple depth and dimple count on the Magnus Forces applied to a golf ball. The study employed 625 data points using Navier–Stokes simulations, visualized in a 3 dimensional surface plot.",
+      tags: ["Physics", "Sports Science", "Aerodynamics", "Python"],
+    },
+    {
       title: "Formula 1 Aerodynamics: Angle of Attack vs Top Speed",
       description:
-        "Analyzed the relationship between aerodynamic angle of attack and top speed performance in Formula 1 vehicles, examining downforce-drag trade-offs.",
+        "Analysis of relationship between aerodynamic angle of attack and top speed performance in Formula 1 vehicles, quantifying and deriving trade-offs.",
       tags: ["Aerodynamics", "Motorsport", "Physics"],
     },
     {
       title: "Literature Review on Corporal Punishment in Parenting",
       description:
         "Comprehensive review of academic literature examining the psychological and developmental impacts of corporal punishment on children.",
-      tags: ["Psychology", "Child Development", "Ethics"],
+      tags: ["Psychology", "Child Development", "Ethics", "Python"],
     },
     {
       title: "Ball Physics: Internal Pressure vs Rebound Height",
       description:
-        "Experimental study investigating the correlation between internal air pressure and rebound characteristics in sports balls.",
+        "Triangulated experimental and simulation study investigating the correlation between internal air pressure and rebound characteristics in sports balls.",
       tags: ["Physics", "Sports Science", "Experimental"],
     },
   ];
@@ -114,7 +121,21 @@ const Research = () => {
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
                       <FileText className="h-5 w-5 text-primary" />
                     </div>
-                    <CardTitle className="text-lg leading-tight">{research.title}</CardTitle>
+                    <CardTitle className="text-lg leading-tight">
+                      {research.link ? (
+                        <a 
+                          href={research.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-primary transition-colors flex items-center gap-2 group"
+                        >
+                          {research.title}
+                          <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </a>
+                      ) : (
+                        research.title
+                      )}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-sm leading-relaxed text-muted-foreground">

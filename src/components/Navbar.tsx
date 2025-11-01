@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
@@ -18,10 +18,13 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    const storedTheme = localStorage.getItem("darkMode");
+    const isDarkMode = storedTheme === null ? true : storedTheme === "true";
     setIsDark(isDarkMode);
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
@@ -36,8 +39,9 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
     { name: "Research", path: "/research" },
+    { name: "Pre-Professional Experience", path: "/preprofessional-experience" },
     { name: "Leadership", path: "/leadership" },
-    { name: "Awards", path: "/awards" },
+    { name: "Recognition", path: "/awards" },
     { name: "Contact", path: "/contact" },
   ];
 

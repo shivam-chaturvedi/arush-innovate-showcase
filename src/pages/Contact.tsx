@@ -108,10 +108,10 @@ const Contact = () => {
                   <CardTitle>Quick Facts</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2 text-sm">
-                  <p>📍 Based in India</p>
-                  <p>🎓 IB Student at Heritage International Xperiential School</p>
-                  <p>💡 Open to research collaborations</p>
-                  <p>🚀 Available for speaking engagements</p>
+                  <p> Based in India</p>
+                  <p> IB Student at Heritage International Xperiential School</p>
+                  <p> Open to research collaborations</p>
+                  <p> Available for speaking engagements</p>
                 </CardContent>
               </Card>
             </div>
