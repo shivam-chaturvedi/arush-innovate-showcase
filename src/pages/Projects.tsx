@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "AdaptEV",
       subtitle: "Founder & Lead Developer",
-      period: "2025 - Present",
+      period: "2023 - Present",
       description:
         "Developed India's first low-cost, student-led electric car designed for paraplegic drivers, featuring innovative upper-limb-only controls and enhanced accessibility adaptations.",
       achievements: [

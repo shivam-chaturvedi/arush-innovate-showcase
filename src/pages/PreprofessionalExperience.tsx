@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 const PreprofessionalExperience = () => {
   const featuredExperiences = [
     {
-      title: "Innaroof Solar",
+      title: "Innovative Roof Solar Solutions LLP",
       subtitle: "Technical Intern",
-      period: "2021 - 2023",
+      period: "2024 - Present",
       description:
         "Designed solar panel layouts for commercial and residential projects. Assisted with on-site installations and gained hands-on experience in renewable energy systems. Established ROI of Rooftop solar Installation for 84 Residential Projects; 15% savings improvement by optimizing panel choices and installation design.",
       achievements: [],
