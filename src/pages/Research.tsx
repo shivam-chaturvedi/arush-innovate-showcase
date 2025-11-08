@@ -7,6 +7,7 @@ const Research = () => {
     {
       title: "Hydrothermal Enhancement of Regenerative Braking",
       subtitle: "A Critical Examination of Water-Cooling Integration Strategies",
+      link: "https://www.irjet.net/archives/V12/i9/IRJET-V12I933.pdf",
       status: "Published",
       journal: "IRJET (International Research Journal of Engineering and Technology)",
       description:
@@ -90,7 +91,19 @@ const Research = () => {
                       </CardDescription>
                       <p className="text-sm text-muted-foreground italic">{paper.journal}</p>
                     </div>
-                    <ExternalLink className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
+                    {
+                      paper.link && (
+                    
+                    <a 
+                      href={paper.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                      <span>View Publication</span>
+                    </a>
+                      )}
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">

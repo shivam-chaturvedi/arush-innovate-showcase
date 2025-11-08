@@ -7,7 +7,7 @@ const Leadership = () => {
     {
       title: "Founder & President",
       organization: "APEX - Automobiles and Motorsport Club",
-      period: "2022-2023",
+      period: "2024 - Present",
       icon: Target,
       description:
         "Founded and led the school's automobiles and motorsport club. Conducted 50+ hours of sessions on engineering principles, types of engines, and car mechanics. Led hands-on workshops on Go-Kart design and construction.",
@@ -16,18 +16,18 @@ const Leadership = () => {
     },
     {
       title: "Founder & Director",
-      organization: "Hi-Tech",
-      period: "2022 - Present",
+      organization: "Hi Tech",
+      period: "2024 - Present",
       icon: Lightbulb,
       description:
-        "Founded and led Hi-Tech, the school's first pan-India tech initiative integrating robotics, hackathons, and esports tournaments. Designed and hosted events engaging 500+ students nationwide.",
+        "Founded and led Hi Tech, the school's first pan-India tech initiative integrating robotics, hackathons, and esports tournaments. Designed and hosted events engaging 500+ students nationwide.",
       impact: ["500+ students engaged", "Pan-India reach", "First tech initiative"],
       tags: ["Robotics", "Hackathons", "Esports"],
     },
     {
       title: "Chairperson & Trainer",
       organization: "School MUNSOC",
-      period: "2022-2023",
+      period: "2023-2025",
       icon: Users,
       description:
         "Trained and mentored 110+ students over 100+ hours, developing debating and diplomacy skills. Chaired multiple MUNs with a total of 300+ delegates impacted.",
@@ -37,7 +37,7 @@ const Leadership = () => {
     {
       title: "Co-Founder & Director",
       organization: "Heritage Basketball League",
-      period: "2022-2023",
+      period: "2024-2025",
       icon: Trophy,
       description:
         "Launched and managed a 150-member student league, overseeing logistics, scheduling, and team match-making. Directed multimedia, outreach, and technology platforms.",
@@ -48,9 +48,9 @@ const Leadership = () => {
 
   const otherRoles = [
     {
-      title: "Team Manager",
+      title: "Mercury Racing",
       organization: "F1 in Schools - Team Mercury",
-      period: "2022-2023",
+      period: "2023-2024",
       achievements: [
         "Led team to national level competition",
         "Best Media Outreach in North India",
@@ -60,7 +60,7 @@ const Leadership = () => {
     {
       title: "Manager",
       organization: "School Esports Team",
-      period: "2022-2023",
+      period: "2022-2024",
       achievements: [
         "Managed official school Esports team",
         "External award for Best Esports Team Manager",

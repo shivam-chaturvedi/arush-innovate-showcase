@@ -17,7 +17,7 @@ const Awards = () => {
         },
         {
           name: "National Astronomy Challenge",
-          achievement: "Top Performance",
+          achievement: "Gold Awardee",
           year: "2023",
         },
       ],
@@ -36,13 +36,13 @@ const Awards = () => {
         {
           name: "CREST Gold Award",
           achievement: "Presented by the British Science Association for Innovation and Social Impact",
-          year: "2024",
+          year: "2025",
           highlight: true,
         },
         {
           name: "AdaptEV Recognition",
           achievement: "Recognized by Suzuki & IIT Madras | Under Consideration by Ministry of Social Justice and Empowerment",
-          year: "2025",
+          year: "2023-2025",
           highlight: true,
         },
         {
@@ -65,11 +65,11 @@ const Awards = () => {
         {
           name: "Various Executive Boards",
           achievement: "Invited to Chair & Direct 6 Committees",
-          year: "2024-2025",
+          year: "2024-Present",
           highlight: true,
         },
         {
-          name: "UNESCO Hong Kong Conference",
+          name: "UNESCO HK Youth Conference",
           achievement: "Two Time Awardee & Press Release Feature",
           year: "2024 & 2025",
           highlight: true,
@@ -106,7 +106,7 @@ const Awards = () => {
         {
           name: "ISSO Table Tennis Nationals",
           achievement: "Team Captain - National Competition",
-          year: "2024-2025",
+          year: "2024-Present",
           highlight: true,
         },
         {
@@ -124,7 +124,7 @@ const Awards = () => {
         {
           name: "WIRED National Music Competition",
           achievement: "1st Place",
-          year: "2025",
+          year: "2024",
         },
         {
           name: "TEDx Performances",

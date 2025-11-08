@@ -16,7 +16,7 @@ const PreprofessionalExperience = () => {
     {
       title: "Pangea Society",
       subtitle: "AI Research Intern",
-      period: "2024",
+      period: "2025",
       description:
         "Developed a Random Forest Predictive AI model in 23 dimensions to assess the likelihood of Major Depressive Disorder, applying data science and machine learning techniques.",
       achievements: [],
